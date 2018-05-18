@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e8e8e8;
+}
+
+main {
+    padding-top: 100px;
+}
+
+.container {
+    width: 960px;
+    margin: auto;
+    padding: 50px;
+    background-color: white;
+    border: solid #a4a8ae;
+    border-radius: 10px;
+}
+
+input {
+    padding: 10px;
+    margin-right: 20px;
+}
+
+button {
+    padding: 10px;
+
+}
+
+a {
+    border: solid #a4a8ae;
+    border-radius: 10px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.game {
+    padding-top: 50px;
+}
+
+.flex {
+    display: flex;
+}
+
+.button-form {
+    border-radius: 100px;
+    cursor: pointer;
+    padding-right: 10px;
+    margin-right: 20px;
+}
+
+.plus {
+    background-color: #2ac241;
+    color: #0a5014;
+}
+
+.moins {
+    background-color: #be2818;
+    color: #3e120b;
+}
+
+.block {
+    display: inline-block;
+}
