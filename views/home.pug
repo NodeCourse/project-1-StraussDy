@@ -1,0 +1,34 @@
+html
+    head
+        title Welcome to Review !
+        link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
+        link(rel="stylesheet", href="styles.css")
+    body
+        main
+        div(class="container")
+            if user
+                h1 Welcome #{user.pseudo}!
+                a(href="/logout") Déconnexion
+
+                form(class="game" method="post", action="/api/post")
+                    h2 Veuillez ajouter un jeu :
+                    div(class="flex")
+                        input(type="text", name="title", placeholder="Titre du jeu :")
+                        textarea(name="content", placeholder="Commentaire :")
+                        button(type="submit") Ajouter
+                for post in posts
+                    article
+                        h3 Notation : (#{post.score}) Jeux : #{post.title}
+                        p Commentaire : #{post.content}
+                        div(class="flex")
+                            form(method="post", action="/api/post/" + post.id + "/upvote")
+                                button(class="button-form plus" type="submit") +
+                            form(method="post", action="/api/post/" + post.id + "/downvote")
+                                button(class="button-form moins" type="submit") -
+
+            else
+                p Connectez-vous où inscrivez-vous !
+                a(href="/login") Connexion
+                br
+                br
+                a(href="/signin") Inscription
